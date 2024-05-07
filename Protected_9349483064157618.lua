@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Steam Hub [Beta]",
-    SubTitle = "True V0.23",
+    SubTitle = "0.58",
     TabWidth = 160,
     Size = UDim2.fromOffset(480, 340),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -13,61 +13,126 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
-    Main = Window:AddTab({ Title = "+Tab Combat", Icon = "" })
+    Main = Window:AddTab({ Title = "Credits", Icon = "settings" })
 }
 
+local Options = Fluent.Options
 
-    
-Tabs.Main:AddButton({
-        Title = "Auto Parry ",
-        Description = "Good auto parry,Click X For Spam and Z for Normal ",
-        Callback = function()  
-getgenv().visualizer = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
+
+    Tabs.Main:AddParagraph({
+        Title = "Creators",
+        Content = "Bacon,Exility,EasyTeam."
+    })
+
+    Tabs.Main:AddParagraph({
+        Title = "Beta Tester",
+        Content = "Bacon,EasyTeam,V4mp,Tubaro Scripts."
+    })
+local Tabs = {
+    Main = Window:AddTab({ Title = "+Tab Blox Fruit", Icon = "" })
+}
+
+    Tabs.Main:AddButton({
+        Title = "Redz Hub",
+        Description = "A best Script and function in almost every executors",
+        Callback = function()
+      print("Executed")     
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()      
+        end
+    })
+
+    Tabs.Main:AddButton({
+        Title = "Domadic Hub",
+        Description = "A best Script and function in almost every executors...",
+        Callback = function()
+      print("Executed")     
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()    
+        end
+    })
+
+
+    Tabs.Main:AddButton({
+        Title = "W Azure",
+        Description = "A very good script and function on:codex,arcerus neon and vega x",
+        Callback = function()
+      print("Executed")     
+getgenv().Team = "Pirates"
+getgenv().AutoLoad = true --Will Load Script On Server Hop
+getgenv().SlowLoadUi  = false
+getgenv().ForceUseSilentAimDashModifier = true --Force turn on silent aim , if error then executor problem
+getgenv().ForceUseWalkSpeedModifier = true --Force turn on Walk Speed Modifier , if error then executor problem
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()    
+        end
+    })
+
+
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "+Tab King Legacy", Icon = "" })
+}
+
+    Tabs.Main:AddButton({
+        Title = "Domadic Hub",
+        Description = "A best Script and function in almost every executors...",
+        Callback = function()
+      print("Executed")     
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()       
+        end
+    })     
+      oadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()       
+        end
+    })
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "+Tab Blade Ball", Icon = "" })
+}
+
+    Tabs.Main:AddButton({
+        Title = "Blox Hub",
+        Description = "I don't test this hubs :(",
+        Callback = function()         loadstring(game:HttpGet(('https://raw.githubusercontent.com/malicious-dev/RobloxScripting/main/bladeball.lua'),true))() 
       print("Executed")         
         end
     })
 
     Tabs.Main:AddButton({
-        Title = "Visual Part(can make bug)",
-        Description = "Visual part",
-        Callback = function()  
-getgenv().visualizer = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
+        Title = "W-Azure",
+        Description = "I don't test this hubs :(",
+        Callback = function()        loadstring(game:HttpGet('https://raw.githubusercontent.com/spacex02/scripts/main/blade-ball-25216'))() 
       print("Executed")         
         end
     })
 
-Tabs.Main:AddButton({
-        Title = "Manual Spam",
-        Description = "Good spam it's recommend for mobile",
-        Callback = function()  
-      print("Executed")        gui, frame, button = Instance.new("ScreenGui", game.CoreGui), Instance.new("Frame"), Instance.new("TextButton")
-gui.ResetOnSpawn = false
-frame.Size, frame.Position, frame.BackgroundColor3, frame.BorderSizePixel, frame.Active, frame.Draggable, frame.Parent = UDim2.new(0, 150, 0, 75), UDim2.new(0, 10, 0, 10), Color3.new(0, 0, 0), 0, true, true, gui
-button.Text, button.Size, button.Position, button.BackgroundColor3, button.BorderColor3, button.BorderSizePixel, button.Font, button.TextColor3, button.TextSize, button.Parent = "Manual spam", UDim2.new(1, -20, 1, -20), UDim2.new(0, 10, 0, 10), Color3.new(0, 0, 0), Color3.new(), 2, Enum.Font.SourceSans, Color3.new(1, 1, 1), 16, frame
+    Tabs.Main:AddButton({
+        Title = "Red Circle",
+        Description = "I don't test this hubs :(",
+        Callback = function()        --⭕Red Circle Auto-Block:
+getgenv().visualizer = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
 
-local activated = false
-
-local function toggle()
-    activated, button.Text = not activated, activated and "Off" or "On"
-    
-    while activated do
-        local args = {1.5, CFrame.new(-254.29, 112.14, -119.27) * CFrame.Angles(-2.03, 0.57, 2.31), {["2617721424"] = Vector3.new(-273.40, -724.80, -20.92)}, {910, 154}}
-        game:GetService("ReplicatedStorage").Remotes.ParryAttempt:FireServer(unpack(args))
-        game:GetService("RunService").Heartbeat:Wait()
-        button.BorderColor3 = Color3.new(math.random(), math.random(), math.random())
-    end
-end
-
-local function showNotification()
-    game.StarterGui:SetCore("SendNotification", {Title = "Manual Spam", Text = "Manual spam", Duration = 5})
-end
-
-button.MouseButton1Click:Connect(function()
-    toggle()
-    showNotification()
-end)     
+      print("Executed")         
         end
     })
+
+   Tabs.Main:AddButton({
+        Title = "Steam Hub",
+        Description = "Steam Hub",
+        Callback = function()                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucashgdhhyy/Blade/main/README.md"))()  
+      print("Executed")
+
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "+Tab Admins", Icon = "" })
+}
+
+    Tabs.Main:AddButton({
+        Title = "Infinity Yield",
+        Description = "A very good Admin script and function in all executors",
+        Callback = function()
+      print("Executed")         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        end
+    })
+
+
+
 
