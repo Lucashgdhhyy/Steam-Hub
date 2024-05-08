@@ -4,7 +4,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Steam Hub [Beta]",
-    SubTitle = "0.5",
+    SubTitle = "0.58",
     TabWidth = 160,
     Size = UDim2.fromOffset(480, 340),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -65,6 +65,8 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc61
         end
     })
 
+
+
 local Tabs = {
     Main = Window:AddTab({ Title = "+Tab King Legacy", Icon = "" })
 }
@@ -76,16 +78,48 @@ local Tabs = {
       print("Executed")     
       loadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()       
         end
+    })     
+      oadstring(game:HttpGet("https://raw.githubusercontent.com/Domadicoof/Domadicoof/main/Domadichub/NottoGay/Start.ranscript"))()       
+        end
     })
 
 local Tabs = {
     Main = Window:AddTab({ Title = "+Tab Blade Ball", Icon = "" })
 }
 
-    Tabs.Main:AddParagraph({
-        Title = "Comming Soon",
-        Content = "Spoiler:Fix bugs,Blade Ball,Release"
+    Tabs.Main:AddButton({
+        Title = "Blox Hub",
+        Description = "I don't test this hubs :(",
+        Callback = function()         loadstring(game:HttpGet(('https://raw.githubusercontent.com/malicious-dev/RobloxScripting/main/bladeball.lua'),true))() 
+      print("Executed")         
+        end
     })
+
+    Tabs.Main:AddButton({
+        Title = "W-Azure",
+        Description = "I don't test this hubs :(",
+        Callback = function()        loadstring(game:HttpGet('https://raw.githubusercontent.com/spacex02/scripts/main/blade-ball-25216'))() 
+      print("Executed")         
+        end
+    })
+
+    Tabs.Main:AddButton({
+        Title = "Red Circle",
+        Description = "I don't test this hubs :(",
+        Callback = function()        --⭕Red Circle Auto-Block:
+getgenv().visualizer = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/RedCircleBlock"))()
+
+      print("Executed")         
+        end
+    })
+
+   Tabs.Main:AddButton({
+        Title = "Steam Hub",
+        Description = "Steam Hub",
+        Callback = function()                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Lucashgdhhyy/Blade/main/README.md"))()  
+      print("Executed")
+
 
 local Tabs = {
     Main = Window:AddTab({ Title = "+Tab Admins", Icon = "" })
@@ -98,5 +132,3 @@ local Tabs = {
       print("Executed")         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
         end
     })
-
-
